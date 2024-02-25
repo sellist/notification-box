@@ -19,3 +19,4 @@ and
 To run the broker, use command:
 `sudo mosquitto -c /etc/mosquitto/conf.d/connect.conf`
 
+STL used was provided by Lozamded, found at https://cults3d.com/en/3d-model/home/arcade-button-doorbell-box (included version in repo)
