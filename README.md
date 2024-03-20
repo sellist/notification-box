@@ -5,18 +5,19 @@ My partner and I often work in the same room with headphones on, and when we wan
 A client will have a 10mm arcade button with LED, and when pressed it will send a message to the "push" topic to the MQTT broker and have a blocking sleep. When not blocked, it will listen to that broker on that same topic and light up when a message is recieved. Simple project, but was a way to learn how to set up/use MQTT messaging and the realm of 3d printing.
 
 ## RPi4 setup
-`sudo apt update && sudo apt upgrade`
-`sudo apt install -y mosquitto mosquitto-clients`
-`sudo systemctl enable mosquitto.service`
-`cd /etc/mosquitto/conf.d/`
-`sudo touch connect.conf`
+- `sudo apt update && sudo apt upgrade`
+- `sudo apt install -y mosquitto mosquitto-clients`
+- `sudo systemctl enable mosquitto.service`
+- `cd /etc/mosquitto/conf.d/`
+- `sudo touch connect.conf`
 
-In `connect.conf`, use your editor of choice to add:
-`listener 1883`
-and
-`allow_anonymous true` 
+In `connect.conf`, use your editor of choice to add: <br>
+- `listener 1883` <br>
+and <br>
+- `allow_anonymous true` <br> 
 
-To run the broker, use command:
+To run the broker, use command: <br>
 `sudo mosquitto -c /etc/mosquitto/conf.d/connect.conf`
-
+<br>
+<br>
 STL used was provided by Lozamded, found at https://cults3d.com/en/3d-model/home/arcade-button-doorbell-box (included version in repo)
